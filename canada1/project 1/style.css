@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -99,7 +100,7 @@ footer {
   padding: 10px 0;
   background-color: #5d7622;;
   color: #fff;
-  margin-top: 20px;
+ 
 }
 
 footer p {

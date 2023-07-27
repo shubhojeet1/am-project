@@ -98,7 +98,7 @@ footer {
   padding: 10px 0;
   background-color: #ba9327cb;;
   color: #fff;
-  margin-top: 20px;
+ 
 }
 
 footer p {
@@ -154,4 +154,19 @@ button {
     flex-direction: column;
     padding: 10px;
   }
+}
+
+
+/* Add toaster styles */
+.toaster {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0.9;
+  z-index: 9999;
 }

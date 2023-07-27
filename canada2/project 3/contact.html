@@ -18,12 +18,13 @@
           <h3>Quick Links</h3>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About </a></li>
+            <li><a href="about.html">Security</a></li>
+            <li><a href="help.html">How it Helps</a></li>
           </ul>
         </aside>
         <section>
           <h2>Contact Website!</h2>
-          <form action="">
+          <form id="contactForm" action="">
             <div class="form-group">
                 <label for="email">Email<span style="color: red">*</span></label>
                 <input  placeholder="Email" type="email" id="email" name="email" required/>
@@ -33,7 +34,7 @@
                 <textarea placeholder="Description" name="description" id="description" cols="30" rows="10" required></textarea>
             </div>
             <div class="button">
-                <button>Submit</button>
+                <button type="submit" id="submitButton" >Submit</button>
             </div>
           </form>
         </section>
@@ -43,5 +44,50 @@
         <p>&copy; 2023 Information Technology</p>
       </footer>
     </div>
+    
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    
+      const contactForm = document.getElementById("contactForm");
+      const submitButton = document.getElementById("submitButton");
+  
+
+      function showAlert(message) {
+        const toaster = document.createElement("div");
+        toaster.classList.add("toaster");
+        toaster.textContent = message;
+  
+     
+        document.body.appendChild(toaster);
+  
+       
+        setTimeout(function () {
+          toaster.remove();
+        }, 3000);
+      }
+  
+        
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault(); 
+  
+        
+        const emailInput = document.getElementById("email");
+        const descriptionInput = document.getElementById("description");
+  
+        if (!emailInput.value || !descriptionInput.value) {
+          showAlert("Please fill in all required fields.");
+          return;
+        }
+  
+     
+        showAlert("Form submitted successfully!");
+  
+      
+        contactForm.reset();
+      });
+    });
+  </script>
+ 
+  
 </html>
